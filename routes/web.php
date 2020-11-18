@@ -12,7 +12,12 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+//'middleware' => 'auth'
+$router->group(['prefix'=>'user'], function () use ($router) {
+   
+    $router->get('/', [
+        'as' => 'index', 
+        'uses' => 'UserController@index'
+    ]);
+    
 });
