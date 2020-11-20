@@ -16,4 +16,14 @@ class UserController extends Controller
     {
         return UserResource::collection(User::all());
     }
+
+    /**
+     * Create user
+     *
+     * @return void
+     */
+    public function store()
+    {
+  
+    }
 }
